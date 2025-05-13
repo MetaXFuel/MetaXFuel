@@ -1,1 +1,28 @@
+# .gitignore
+
+# Node.js dependencies
+node_modules/
+
+# Hardhat artifacts (compiled contracts)
+artifacts/
+cache/
+
+# TypeScript output (if using TypeScript)
+dist/
+out/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Hardhat specific files
+coverage/
+
+# VS Code settings
+.vscode/
+
+# Mac system files
+.DS_Store
 
