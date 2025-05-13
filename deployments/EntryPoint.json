@@ -1,1 +1,29 @@
+import { ethers } from "hardhat";
+
+// Helper function to deploy the EntryPoint contract
+export async function deployEntryPoint(): Promise<string> {
+    const EntryPoint = await ethers.getContractFactory("EntryPoint");
+    const entryPoint = await EntryPoint.deploy();
+    console.log("Deployed EntryPoint contract to:", entryPoint.address);
+    return entryPoint.address;
+}
+
+// Helper function to deploy the GASXToken contract
+export async function deployGASXToken(initialSupply: ethers.BigNumber): Promise<string> {
+    const GASXToken = await ethers.getContractFactory("GASXToken");
+    const gasXToken = await GASXToken.deploy(initialSupply);
+    console.log("Deployed GASXToken contract to:", gasXToken.address);
+    return gasXToken.address;
+}
+
+// Helper function to deploy the GASXPaymaster contract
+export async function deployGASXPaymaster(
+    gasXTokenAddress: string,
+    entryPointAddress: string
+): Promise<string> {
+    const GASXPaymaster = await ethers.getContractFactory("GASXPaymaster");
+    const gasXPaymaster = await GASXPaymaster.deploy(gasXTokenAddress, entryPointAddress);
+    console.log("Deployed GASXPaymaster contract to:", gasXPaymaster.address);
+    return gasXPaymaster.address;
+}
 
