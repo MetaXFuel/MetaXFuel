@@ -1,1 +1,19 @@
+import { ethers } from "hardhat";
+
+async function main() {
+    const [deployer] = await ethers.getSigners();
+    const entryPointAddress = "0x...";  // Replace with deployed EntryPoint contract address
+
+    console.log("Deploying GASXSmartWallet with the account:", deployer.address);
+
+    const GASXSmartWallet = await ethers.getContractFactory("GASXSmartWallet");
+    const gasXSmartWallet = await GASXSmartWallet.deploy(entryPointAddress);
+
+    console.log("GASXSmartWallet deployed to:", gasXSmartWallet.address);
+}
+
+main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+});
 
