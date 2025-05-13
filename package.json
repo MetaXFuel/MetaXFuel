@@ -1,1 +1,24 @@
+{
+  "name": "gasx-project",
+  "version": "1.0.0",
+  "description": "A gasless Ethereum transaction system using ERC-20 tokens for fees.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "build": "tsc && node esbuild.config.ts",
+    "deploy": "npx hardhat run scripts/deployToken.ts --network ropsten",
+    "deploy-entrypoint": "npx hardhat run scripts/deployEntryPoint.ts --network ropsten"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^5.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "hardhat": "^2.9.3",
+    "esbuild": "^0.14.0",
+    "dotenv": "^10.0.0"
+  }
+}
 
