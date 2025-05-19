@@ -81,7 +81,7 @@ For any questions or contributions, feel free to reach out to [Your Name or Emai
 
 ---
 
-### **Example Transaction (Using MetaXFuel)**
+### **Example Transaction (Using MetaXFuel)***
 
 To make a transaction using MetaXFuel (MXF) tokens instead of ETH, follow these steps:
 
