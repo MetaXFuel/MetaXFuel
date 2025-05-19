@@ -3,7 +3,7 @@ import { ethers } from "hardhat";
 
 async function main() {
     const [deployer] = await ethers.getSigners();
-    const initialSupply = ethers.utils.parseUnits("1000000", 18); // 1 million tokens
+    const initialSupply = ethers.utils.parseUnits("100000", 18); // 1 million tokens
 
     console.log("Deploying GASXToken with the account:", deployer.address);
 
