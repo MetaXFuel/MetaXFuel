@@ -25,5 +25,5 @@ contract GASXPaymaster is Ownable {
         require(gasXToken.transferFrom(user, address(this), amount), "Transfer failed");
     }
 
-    // Additional logic to approve User Operations or manage fees
+    // Additional logic to approve User Operations or manage fees.
 }
